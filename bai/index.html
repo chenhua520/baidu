@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>百度一下，你就知道</title>
+
+    <link rel=icon sizes=any mask href=//www.baidu.com/img/baidu_85beaf5496f291521eb75ba38eacbd87.svg>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 100%;
+            min-width: 800px;
+        }
+        li{
+            list-style: none;
+        }
+        #nav{
+            position: relative;
+            top: 0;
+            right: 0;
+            width: 100%;
+            border-bottom: 1px solid #DDDDDD;
+            height: 32px;
+        }
+        #nav>ul{
+float: right;
+        }
+        #nav>ul>li{
+            position: relative;
+            float: left;
+            margin-left: 27px;
+            height: 32px;
+            line-height: 32px;
+        }
+        a{
+            font-size: 13px;
+            color: #555;
+
+        }
+        .nav-a{
+            color: #555;
+            font-weight: 700
+        }
+        .nav-more{
+            width: 86px;
+            height: 32px;
+            text-align: center;
+            background: #398bfb;
+
+
+        }
+        .nav-more a{
+            text-decoration: none;
+            color: white;
+        }
+        #nav ul li.nav-login ul{
+            position:absolute;
+            top:32px;
+            left:-21px;
+        border: 1px solid #dddddd;
+            display: none;
+        }
+        #nav ul li.nav-login :hover   #nav ul li ul{
+            display: block;
+        }
+        .nav-login li{
+            width: 70px;
+            height: 30px;
+            text-align: center;
+        }
+        .nav-login li a{
+            text-decoration: none;
+            font-size: 12px;
+        }
+        .nav-login li:hover{
+
+            background: #398bfb;
+
+            color: white;
+        }
+        #nav ul li.nav-login:hover ul{display:block;}
+        .nav-set li{
+            width: 70px;
+            height: 30px;
+            text-align: center;
+        }
+        #nav ul li.nav-set ul{
+            position:absolute;
+            top:32px;
+            left:-20px;
+            border: 1px solid #dddddd;
+            display: none;
+        }
+        .nav-set li:hover{
+
+            background: #398bfb;
+
+            color: white;
+        }
+        .nav-set li a{
+            text-decoration: none;
+            font-size: 12px;
+        }
+        #nav ul li.nav-set:hover ul{display:block;}
+        .abside{
+            border-left: 1px solid #cccccc;
+            width: 86px;
+            height: 100%;
+            position: fixed;
+            background: #f7f7f7;
+            top: 0;
+            right: 0px;
+            animation:myfirst 1s ;
+/*padding-top: 10px;*/
+text-align: center;
+
+            display: none;
+            z-index: 999;
+        }
+        .abside ul{
+            height: 1000px;
+        }
+        @keyframes myfirst{
+
+            from{  right: -86px}
+            to{ right: 0px}
+        }
+
+
+        .abside li{
+            width: 86px;
+            height: 86px;
+            border-bottom: 1px solid  #eeeeee;
+
+        }
+        .abside li:nth-child(1){
+            height: 32px;
+            line-height: 32px;
+            font-size: 13px;
+        }
+        .abside img{
+            /*display: block;*/
+            /*margin-left: 27px;*/
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+        .abside span{
+            font-size: 13px;
+        }
+        .inp{
+
+            width: 100%;
+            text-align: center;
+            margin-top: 100px;
+
+        }
+        @media screen and(min-width: 500px){
+            .inp{
+
+                width: 100%;
+                text-align: center;
+                margin-top: 50%;
+
+            }
+        }
+        .inp input{
+            width: 550px;
+            height: 36px;
+            border: 1px solid  #b8b8b8 ;
+            margin-top: 10px;
+            cursor: text;
+
+        }
+        .inp span{
+            display: inline-block;
+            width: 94px;
+        height: 38px;
+            line-height: 36px;
+            background: #398bfb;
+            color: white;
+        }
+        footer{
+            width: 100%;
+            text-align: center;
+            position: fixed;
+            left: 0;
+            bottom: 20px;
+        }
+        .article a{
+            font-size:12px;
+            color: #9999B3;
+        }
+        .erweima-p{
+
+            font-size:13px;
+            color: #9999B3;
+        }
+        .article{
+            margin-top: 20px;
+        }
+        .article span{
+
+            font-size:12px;
+            color: #9999B3;
+        }
+        .footer-center{
+            margin: 0 auto;
+            width: 800px;
+        }
+        .btn{
+            cursor: pointer;
+        }
+.inp-tubiao{
+    position: relative;
+    top:0;
+    left: 0;
+}
+        .creame{
+            position: absolute;
+            top:20px;
+            /*left: 711px;*/
+            margin-left: -30px;
+            cursor: pointer;
+            width: 22px;
+            height: 23px;
+            background: url("./images/creame.png") no-repeat;
+            background-size: 100%;
+
+
+        }
+        .creame:hover{
+            position: absolute;
+            top:20px;
+            /*left: 711px;*/
+            margin-left: -30px;
+            cursor: pointer;
+            width: 22px;
+            height: 23px;
+            background: url("./images/creameone.png") no-repeat;
+            background-size: 100%;
+        }
+    </style>
+</head>
+
+<body>
+<header id="nav">
+<ul>
+    <li><a href="" class="nav-a">新闻</a></li>
+    <li><a href="" class="nav-a">好123</a></li>
+    <li><a href="" class="nav-a">地图</a></li>
+    <li><a href="" class="nav-a">贴吧</a></li>
+    <li><a href="" class="nav-a">学术</a></li>
+    <li class="nav-login"><a href="#" >登录</a>
+        <ul class="arrow">
+            <li ><a href="#">个人中心</a></li>
+            <li><a href="#">账号设置</a></li>
+            <li><a href="#">意见反馈</a></li>
+            <li><a href="#">退出</a></li>
+
+        </ul></li>
+
+    <li class="nav-set"><a href="#">设置</a>
+
+        <ul>
+            <li><a href="#">搜索设置</a></li>
+            <li><a href="#">高级设置</a></li>
+            <li><a href="#">预测设置</a></li>
+            <li><a href="#">隐私设置</a></li>
+
+        </ul>
+    </li>
+    <li class="nav-more"><a href="#">更多产品</a>
+
+
+    </li>
+    
+</ul>
+</header>
+<div class="abside">
+    <ul>
+        <li>更多产品</li>
+        <li><a href=""><img src="images/nuomi.png" alt="" width="35px" height="35px"><br><span>糯米</span></a></li>
+        <li><a href=""><img src="images/yinyue.png" alt="" width="35px" height="35px"><br><span>音乐</span></a></li>
+        <li><a href=""><img src="images/zhidao.png " alt="" width="35px" height="35px"><br><span>知道</span></a></li>
+        <li><a href=""><img src="images/wenku.png" alt="" width="35px" height="35px"><br><span>文库</span></a></li>
+        <li><a href=""><img src="images/picture.png" alt="" width="35px" height="35px"><br><span>图片</span></a></li>
+
+
+    </ul>
+</div>
+
+<div class="inp">
+    <div class="pic"><img src="./images/baidubb.png" alt="" width="250px" height="90px"></div>
+   <div class="inp-tubiao"><input type="text"><i class="creame"></i><span class="btn">百度一下</span></div>
+</div>
+<footer>
+<div class="footer-center">
+    <div class="erweima">
+        <img src="./images/erweima.png" alt="">
+        <p>下载百度APP</p>
+        <p class="erweima-p">有事搜一搜，没事看一看</p>
+
+    </div>
+    <div class="article">
+        <a href="">把百度设为首页</a>
+        <a href="">关于百度</a>
+        <a href="">百度推广</a>
+        <a href="">百度市场</a>
+        <a href="">应用市场</a>
+        <br>
+        <br>
+<span>
+    ©2019 Baidu <a href="">使用百度前必读</a>  意见反馈 京ICP证030173号 &nbsp; 京公网安备11000002000001号
+</span>
+    </div>
+</div>
+</footer>
+<!--<script src="https://lib.baomitu.com/jquery/3.4.1/jquery.slim.min.js"></script>-->
+<script src="js/jquery-1.11.1.js"></script>
+<script>
+
+    $(document).ready(function(){
+        $(".nav-more").mouseenter(function(){
+            $('.abside').css('display','block');
+        }
+     );
+
+        $(".abside").mouseleave(function(){
+                    $('.abside').css('display','none')
+
+                }
+
+        );
+
+    });
+</script>
+</body>
+</html>
