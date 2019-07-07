@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
     <title>百度一下，你就知道</title>
 
     <link rel=icon sizes=any mask href=//www.baidu.com/img/baidu_85beaf5496f291521eb75ba38eacbd87.svg>
@@ -114,7 +115,7 @@ float: right;
             top: 0;
             right: 0px;
             animation:myfirst 1s ;
-/*padding-top: 10px;*/
+
 text-align: center;
 
             display: none;
@@ -134,18 +135,22 @@ text-align: center;
             width: 86px;
             height: 86px;
             border-bottom: 1px solid  #eeeeee;
+            /*padding-top: 30px;*/
+            /*border-size:border-box;*/
 
         }
         .abside li:nth-child(1){
             height: 32px;
             line-height: 32px;
             font-size: 13px;
+            padding: 0;
         }
         .abside img{
             /*display: block;*/
-            /*margin-left: 27px;*/
+
             border-radius: 5px;
             margin-top: 15px;
+
         }
         .abside span{
             font-size: 13px;
@@ -156,9 +161,9 @@ text-align: center;
             text-align: center;
             margin-top: 100px;
 
+
         }
 
-      
         .inp input{
             width: 550px;
             height: 36px;
@@ -235,6 +240,28 @@ text-align: center;
             background: url("./images/creameone.png") no-repeat;
             background-size: 100%;
         }
+        .nav-more:hover .abside{
+            border-left: 1px solid #cccccc;
+            width: 86px;
+            height: 100%;
+            position: fixed;
+            background: #f7f7f7;
+            top: 0;
+            right: 0px;
+            animation:myfirst 1s ;
+            /*padding-top: 10px;*/
+            text-align: center;
+
+            display: block;
+            z-index: 999;
+        }
+        .nav-more .abside span{
+            color: black;
+        display: block;
+            margin-top: -10px;
+            font-size: 12px;
+        }
+
     </style>
 </head>
 
@@ -266,24 +293,24 @@ text-align: center;
         </ul>
     </li>
     <li class="nav-more"><a href="#">更多产品</a>
+        <div class="abside">
+            <ul>
+                <li>更多产品</li>
+                <li><a href=""><img src="images/nuomi.png" alt="" width="35px" height="35px"><span>糯米</span></a></li>
+                <li><a href=""><img src="images/yinyue.png" alt="" width="35px" height="35px"><span>音乐</span></a></li>
+                <li><a href=""><img src="images/zhidao.png " alt="" width="35px" height="35px"><span>知道</span></a></li>
+                <li><a href=""><img src="images/wenku.png" alt="" width="35px" height="35px"><span>文库</span></a></li>
+                <li><a href=""><img src="images/picture.png" alt="" width="35px" height="35px"><span>图片</span></a></li>
 
+
+            </ul>
+        </div>
 
     </li>
     
 </ul>
 </header>
-<div class="abside">
-    <ul>
-        <li>更多产品</li>
-        <li><a href=""><img src="images/nuomi.png" alt="" width="35px" height="35px"><br><span>糯米</span></a></li>
-        <li><a href=""><img src="images/yinyue.png" alt="" width="35px" height="35px"><br><span>音乐</span></a></li>
-        <li><a href=""><img src="images/zhidao.png " alt="" width="35px" height="35px"><br><span>知道</span></a></li>
-        <li><a href=""><img src="images/wenku.png" alt="" width="35px" height="35px"><br><span>文库</span></a></li>
-        <li><a href=""><img src="images/picture.png" alt="" width="35px" height="35px"><br><span>图片</span></a></li>
 
-
-    </ul>
-</div>
 
 <div class="inp">
     <div class="pic"><img src="./images/baidubb.png" alt="" width="250px" height="90px"></div>
@@ -315,20 +342,7 @@ text-align: center;
 <script src="js/jquery-1.11.1.js"></script>
 <script>
 
-    $(document).ready(function(){
-        $(".nav-more").mouseenter(function(){
-            $('.abside').css('display','block');
-        }
-     );
 
-        $(".abside").mouseleave(function(){
-                    $('.abside').css('display','none')
-
-                }
-
-        );
-
-    });
 </script>
 </body>
 </html>
